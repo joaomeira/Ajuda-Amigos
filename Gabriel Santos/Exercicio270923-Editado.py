@@ -41,25 +41,27 @@ while True:
     elif elemento == 'FOGO':
         pontosFogo = (pontosFogo + treino)
         pontosAgua = (pontosAgua / 2)
+        
         if pontosAgua < 0:
             pontosAgua = 0
 
+    # Uma opção para encurtar o codigo é também se aproveitar dos operadores
+    # de atribuição..... Nesse caso é interessane utilizar o += atribuindo
+    # x += y é equivalente a x = x + y
+    # Observe como foi utilizado no elemento abaixo....
     elif elemento == 'TERRA':
-        # Uma opção para encurtar o codigo é também se aproveitar dos operadores
-        # de atribuição..... Nesse caso é interessane utilizar o += atribuindo
-        # x += y é equivalente a x = x + y
-        # Observe como foi utilizado no elemento abaixo....
         pontosTerra += treino
         pontosAr /= 2
 
         if pontosAr < 0:
             pontosAr = 0
 
+    # Outro ponto de erro foram as identações..... Ficar atento pois
+    # o python as utiliza para identificar onde será feita a operação..!!
     elif elemento == 'AR':
-        # Outro ponto de erro foram as identações..... Ficar atento pois
-        # o python as utiliza para identificar onde será feita a operação..!!
         pontosAr = (pontosAr + treino)
         pontosTerra = (pontosTerra / 2)
+
         if pontosTerra < 0:
             pontosTerra = 0
 
